@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biodata Siswa</title>
+  <style>
+    /* css reset */
+
+* {
+
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #528bd6;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-image: url('1.jpg');
+}
+
+header {
+  margin: 20px;
+  text-align: center
+}
+
+header h1 {
+  font-size: 1.4em;
+  letter-spacing: 2px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+/* form */
+form {
+  width: 80%;
+  margin: auto;
+  padding: 20px 2%;
+  box-sizing: border-box;
+  background-color: #cecece;
+  border-radius: 20px;
+  opacity: 0.8;
+}
+
+.form-group {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.text {
+  text-align: left;
+  width: 50%;
+}
+
+.inputan {
+  display: flex;
+  box-sizing: border-box;
+  width: 50%;
+  margin: 10px auto;
+}
+
+.inp {
+  width: 50%;
+  height: 25px;
+  border-radius: 4px;
+  border: none;
+  border-bottom: 1px solid #000;
+  box-sizing: border-box;
+  padding: 4px;
+}
+
+.inp:focus-visible {
+  outline: none;
+  box-shadow: 0 1px 3px 2px #00b3ff;
+}
+
+.inp option {
+  text-align: center;
+}
+
+.text label {
+  margin-left: 40%;
+}
+
+/* tombol */
+.btn-cek {
+  margin-left: 10px;
+}
+
+.btn-hasil {
+  margin-top: 20px;
+}
+
+.btn-hasil input {
+  margin: 0 10px;
+}
+
+.btn input {
+  width: 100px;
+  height: 30px;
+  background-color: #083447;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.btn input:hover {
+  background-color: #00b3ff;
+}
+
+.btn-hasil {
+  text-align: center;
+}
+
+.btn-hasil input:nth-child(2):hover {
+  background-color: #ff0000;
+}
+
+/* radio */
+.radio {
+  margin-right: 20px;
+}
+
+/* tabel */
+.data {
+  font-family: sans-serif;
+  color: #444;
+  border-collapse: collapse;
+  width: 80vw;
+  margin: 30px auto;
+  box-sizing: border-box;
+  opacity: 0.9;
+
+}
+
+.data th {
+  background: #00ffaa;
+  color: #fff;
+  font-weight: normal;
+}
+
+.data th,
+.data td {
+  padding: 8px 10px;
+  text-align: center;
+}
+
+.data tr {
+  background-color: #30bdfa;
+}
+
+.data tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>BIODATA</h1>
+    <h1>SISWA KELAS XII MM</h1>
+    <h1>SMK NEGERI 2 PURWOKERTO</h1>
+    <h1>TAHUN AJARAN 2022/2023</h1>
+  </header>
+  <main>
+    <form method="post">
+
+      <div class="form-group">
+        <div class="text">
+          <label for="NIS">NIS<span style="color: red;">*</span></label>
+        </div>
+        <div class="inputan">
+          <input type="number" required class="inp" id="NIS" placeholder="NIS">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="text">
+          <label for="NAMA">NAMA<span style="color: red;">*</span></label>
+        </div>
+        <div class="inputan">
+          <input type="text" required class="inp" id="NAMA" placeholder="Masukan Nama Anda">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="text">
+          <label for="TEMPAT-LAHIR">TEMPAT LAHIR</label>
+        </div>
+        <div class="inputan">
+          <input type="text" class="inp" id="TEMPAT-LAHIR" placeholder="Tempat Lahir">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="text">
+          <label for="TANGGAL-LAHIR">TANGGAL LAHIR</label>
+        </div>
+        <div class="inputan">
+          <input type="date" class="inp" id="TANGGAL-LAHIR">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="text">
+          <label for="AGAMA">AGAMA</label>
+        </div>
+        <div class="inputan">
+          <select id="AGAMA" class="inp">
+            <option>Islam</option>
+            <option>Kristen</option>
+            <option>Hindu</option>
+            <option>Katolik</option>
+            <option>Budha</option>
+            <option>Kepercayaan</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="text">
+          <label for="JENIS-KELAMIN">JENIS KELAMIN</label>
+        </div>
+        <div class="inputan jnsklmn">
+          <label class="radio"><input type="radio" name="jenis-kelamin" value="Laki-Laki">Laki-Laki</label>
+          <label class="radio"><input type="radio" name="jenis-kelamin" value="Perempuan">Perempuan</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="text">
+          <label for="ALAMAT">ALAMAT</label>
+        </div>
+        <div class="inputan">
+          <textarea name="biografi" id="ALAMAT" style="height: 60px;" class="inp" placeholder="Alamat"></textarea>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="text">
+          <label for="UANGSAKUPERHARI">Uang Saku Per-Hari</label>
+        </div>
+        <div class="inputan">
+          <input type="number" class="inp" id="UANGSAKUPERHARI" onchange="ganti()" placeholder="RP. ">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="text">
+          <label>Total Uang Saku</label>
+        </div>
+        <div class="inputan">
+          <span id="TOTALUANGSAKU">RP. <span style="opacity: .5;">(Hasil Uang Saku Harian dikali 25)</span></span>
+        </div>
+      </div>
+
+      <div class="btn btn-hasil">
+        <input type="submit" onclick="kirim()" value="Kirim">
+        <input type="submit" onclick="batal()" value="Batal">
+        <button onclick="exportTableToExcel('data')">Microsoft Excel</button>
+      </div>
+      <p style="text-align: right;margin-right: 25%;font-family: Arial;font-size: .9em"><span
+          style="color: red;">*</span> Wajib DIisi</p>
+    </form>
+  </main>
+  <footer>
+    <table id="data" class="data">
+      <thead>
+        <tr>
+          <th>NIS</th>
+          <th>NAMA</th>
+          <th>TEMPAT LAHIR</th>
+          <th>TANGGAL LAHIR</th>
+          <th>AGAMA</th>
+          <th>JENIS KELAMIN</th>
+          <th>ALAMAT</th>
+          <th>UANG SAKU HARIAN</th>
+          <th>TOTAL</th>
+        </tr>
+      </thead>
+    </table>
+  </footer>
+  <script>
+
+    function exportTableToExcel(tableID, filename = '') {
+  var downloadLink;
+  var dataType = 'application/vnd.ms-excel';
+  var tableSelect = document.getElementById(tableID);
+  var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
+
+  filename = filename ? filename + '.xls' : 'data.xls';
+
+  downloadLink = document.createElement("a");
+
+  document.body.appendChild(downloadLink);
+  if (navigator.msSaveOrOpenBlob) {
+      var blob = new Blob(['\ufeff', tableHTML], {
+          type: dataType
+      });
+      navigator.msSaveOrOpenBlob(blob, filename);
+  } else {
+      downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
+
+      downloadLink.download = filename;
+
+      downloadLink.click();
+  }
+}
+    
+    function ganti() {
+
+  const harian =document.getElementById('UANGSAKUPERHARI').value;
+
+  const hasil = document.getElementById('TOTALUANGSAKU');
+  hasil.innerHTML = "Rp. " + harian * 25 ;
+}
+
+function batal() {
+  document.getElementById("NIS").value = "";
+  document.getElementById("NAMA").value = "";
+  document.getElementById("TEMPAT-LAHIR").value = "";
+  document.getElementById("TANGGAL-LAHIR").value = "";
+  document.getElementById("AGAMA").value = "";
+  document.getElementById("ALAMAT").value = "";
+  document.getElementById("UANGSAKUPERHARI").value = "";
+  var total = document.getElementById("TOTALUANGSAKU");
+  total.innerHTML = "Rp. ";
+  alert("Data Tidak Dimasukan");
+}
+
+function kirim() {
+  let jenis = document.getElementsByName('jenis-kelamin');
+  let GENDER = "";
+  let check;
+  for (check=0; check < jenis.length; check++) {
+    if (jenis[check].checked) {
+      GENDER = GENDER + jenis[check].value + "";
+    }
+  }
+  const NIS = document.getElementById('NIS').value;
+  const NAMA = document.getElementById('NAMA').value;
+  const TEMPATLAHIR = document.getElementById('TEMPAT-LAHIR').value;
+  const TANGGALLAHIR = document.getElementById('TANGGAL-LAHIR').value;
+  const AGAMA = document.getElementById('AGAMA').value;
+  const ALAMAT = document.getElementById('ALAMAT').value;
+  const UANGSAKUPERHARI = document.getElementById('UANGSAKUPERHARI').value;
+  const TOTALUANGSAKU = document.getElementById('TOTALUANGSAKU').innerHTML;
+
+  if (confirm("Yakin Input Data?") == true) {
+    if (NIS == null || NIS == "") {
+      if (NAMA == null || NAMA == "") {
+        alert("Isi Kolom NIS dan Nama");
+      }
+      else {
+        alert("Isi Kolom NIS");
+      } return true;
+    }
+    else {
+      if (NAMA == null || NAMA == "") {
+        alert("Isi Kolom Nama");
+      }
+      else {
+        var tabel = document.getElementById("data");
+        var row = tabel.insertRow(1);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        var cell4 = row.insertCell(3);
+        var cell5 = row.insertCell(4);
+        var cell6 = row.insertCell(5);
+        var cell7 = row.insertCell(6);
+        var cell8 = row.insertCell(7);
+        var cell9 = row.insertCell(8);
+  
+        cell1.innerHTML = NIS;
+        cell2.innerHTML = NAMA;
+        cell3.innerHTML = TEMPATLAHIR;
+        cell4.innerHTML = TANGGALLAHIR;
+        cell5.innerHTML = AGAMA;
+        cell6.innerHTML = GENDER;
+        cell7.innerHTML = ALAMAT;
+        cell8.innerHTML = "Rp. " + UANGSAKUPERHARI;
+        cell9.innerHTML = TOTALUANGSAKU;
+  
+        document.getElementById("NIS").value = "";
+        document.getElementById("NAMA").value = "";
+        document.getElementById("TEMPAT-LAHIR").value = "";
+        document.getElementById("TANGGAL-LAHIR").value = "";
+        document.getElementById("AGAMA").value = "";
+        document.getElementById("ALAMAT").value = "";
+        document.getElementById("UANGSAKUPERHARI").value = "";
+        document.getElementById("TOTALUANGSAKU").innerHTML = "";
+        alert("Data Telah Dimasukan");
+      }
+    }
+  } else {
+    batal();
+  }
+}
+
+
+  </script>
+</body>
+
+</html>
